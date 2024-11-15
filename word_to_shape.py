@@ -22,6 +22,14 @@ angles = []
 #ask for a word input
 word = input('Please, enter a word.')
 
+#remove spaces and check if the remaining characters are all letters
+def exit(word):
+    if not word.replace(' ', '').isalpha():
+        print('Please, enter letters only.')
+        sys.exit()# exit the program if the input is invalid
+    
+exit(word)
+
 # list() splits the word into a list of characters
 letter_list = list(word) 
 
